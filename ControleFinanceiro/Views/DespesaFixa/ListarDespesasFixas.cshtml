@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Modelo.Entidades.DespesaFixa>
+
+@{
+    ViewBag.Title = "ListarDespesasFixas";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<h2>ListarDespesasFixas</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeItem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Valor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataHora)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Categoria)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.DespesaFixaId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.DespesaFixaId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.DespesaFixaId })
+        </td>
+    </tr>
+}
+
+<!--Falta organizar a view-->
+<tbody>
+    @foreach(var item in ){
+
+        <tr>
+            <td class="text-center"></td>
+            <td class="font-w600 text-success">+ R$:@Html.DisplayFor(modelItem => item.Valor)</td>
+            <td class="font-size-sm">Stripe</td>
+            <td class="d-none d-sm-table-cell">
+                <span class="font-size-sm text-muted">October 3, 2017 12:16</span>
+            </td>
+        </tr>
+        
+    }
+</tbody>

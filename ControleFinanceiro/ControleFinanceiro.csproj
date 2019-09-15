@@ -3633,29 +3633,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\CompraFixaController.cs" />
-    <Compile Include="Controllers\CompraMensalController.cs" />
-    <Compile Include="Controllers\CompraParceladaController.cs" />
-    <Compile Include="Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\DespesaFixaController.cs" />
+    <Compile Include="Controllers\DespesaMensalController.cs" />
+    <Compile Include="Controllers\DespesaParceladaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20190907183047_Inicial.cs" />
-    <Compile Include="Migrations\20190907183047_Inicial.designer.cs">
-      <DependentUpon>20190907183047_Inicial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\EFContextModelSnapshot.cs" />
-    <Compile Include="Models\CompraFixa.cs" />
-    <Compile Include="Models\CompraMensal.cs" />
-    <Compile Include="Models\CompraParcelada.cs" />
-    <Compile Include="Persistencia\Context\EFContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Dashboard.cshtml" />
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />
     <Content Include="Scripts\umd\popper-utils.min.js.map" />
@@ -3686,7 +3676,6 @@
     <Content Include="Template\assets\fonts\simple-line-icons\Simple-Line-Icons.ttf" />
     <Content Include="Template\assets\fonts\simple-line-icons\Simple-Line-Icons.woff" />
     <Content Include="Template\assets\fonts\simple-line-icons\Simple-Line-Icons.woff2" />
-    <Content Include="Views\Dashboard\Dashboard.cshtml" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
     <Content Include="Template\assets\js\plugins\bootstrap-colorpicker\css\bootstrap-colorpicker.css.map" />
@@ -3743,6 +3732,8 @@
     <Content Include="Template\assets\js\plugins\summernote\summernote-lite.js.map" />
     <Content Include="Template\assets\js\plugins\summernote\summernote.js.map" />
     <Content Include="Views\Shared\_LayoutPage.cshtml" />
+    <Content Include="Views\DespesaFixa\AdicionarDespesaFixa.cshtml" />
+    <Content Include="Views\DespesaFixa\ListarDespesasFixas.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -3760,6 +3751,16 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Modelo\Modelo.csproj">
+      <Project>{36482e2d-0214-4e66-85d5-ef8e0d76e468}</Project>
+      <Name>Modelo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Servico\Servico.csproj">
+      <Project>{a6d99a7d-d6e5-4e39-9a74-4e8b9142ff52}</Project>
+      <Name>Servico</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

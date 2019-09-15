@@ -1,16 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Servico.Tabelas;
+using System;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace ControleFinanceiro.Controllers
 {
     public class HomeController : Controller
     {
+        private DashboardServico dashboardServico = new DashboardServico();
+
+        
         // GET: Home
-        public ActionResult Index()
+        public ActionResult Dashboard()
         {
+            var mes = DateTime.Now.Month;
+            var ano = DateTime.Now.Year;
+
+            var somaTotalDespesasMensal = dashboardServico.ObterSomaDespesasMensal(mes, ano);
+            ViewBag.SomaDespesasMensalTotal = somaTotalDespesasMensal;
             return View();
         }
     }
