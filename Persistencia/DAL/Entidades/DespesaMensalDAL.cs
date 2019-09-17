@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Modelo.Entidades;
+using Persistencia.Context;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Persistencia.DAL.Entidades
 {
-    class DespesaMensalDAL
+    public class DespesaMensalDAL
     {
+        private EFContext context = new EFContext();
+
+        public IQueryable<DespesaMensal> ObterDespesasFixas()
+        {
+            return context.DespesasMensais.OrderBy(x => x.Valor);
+        }
     }
 }

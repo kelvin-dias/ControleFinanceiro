@@ -72,30 +72,7 @@
                     </tr>
                 </tbody>
                 <tbody>
-                    <tr>
-                        <td class="text-center"></td>
-                        <td class="font-w600 text-success">+ $281,00</td>
-                        <td class="font-size-sm">Stripe</td>
-                        <td class="d-none d-sm-table-cell">
-                            <span class="font-size-sm text-muted">October 3, 2017 12:16</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-center"></td>
-                        <td class="font-w600 text-success">+ $140,00</td>
-                        <td class="font-size-sm">Stripe</td>
-                        <td class="d-none d-sm-table-cell">
-                            <span class="font-size-sm text-muted">October 8, 2017 12:16</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-center"></td>
-                        <td class="font-w600 text-success">+ $203,00</td>
-                        <td class="font-size-sm">Stripe</td>
-                        <td class="d-none d-sm-table-cell">
-                            <span class="font-size-sm text-muted">October 12, 2017 12:16</span>
-                        </td>
-                    </tr>
+                    @Html.Action("ListarDespesasFixas", "DespesaFixa")
                 </tbody>
                 <tbody class="js-table-sections-header">
                     <tr>
@@ -112,30 +89,7 @@
                     </tr>
                 </tbody>
                 <tbody>
-                    <tr>
-                        <td class="text-center"></td>
-                        <td class="font-w600 text-success">+ $167,00</td>
-                        <td class="font-size-sm">Stripe</td>
-                        <td class="d-none d-sm-table-cell">
-                            <span class="font-size-sm text-muted">October 28, 2017 12:16</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-center"></td>
-                        <td class="font-w600 text-success">+ $136,00</td>
-                        <td class="font-size-sm">Stripe</td>
-                        <td class="d-none d-sm-table-cell">
-                            <span class="font-size-sm text-muted">October 18, 2017 12:16</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-center"></td>
-                        <td class="font-w600 text-success">+ $294,00</td>
-                        <td class="font-size-sm">Stripe</td>
-                        <td class="d-none d-sm-table-cell">
-                            <span class="font-size-sm text-muted">October 24, 2017 12:16</span>
-                        </td>
-                    </tr>
+                    @Html.Action("ListarDespesasMensais", "DespesaMensal")
                 </tbody>
                 <tbody class="js-table-sections-header">
                     <tr>
@@ -152,38 +106,10 @@
                     </tr>
                 </tbody>
                 <tbody>
-                    <tr>
-                        <td class="text-center"></td>
-                        <td class="font-w600 text-success">+ $270,00</td>
-                        <td class="font-size-sm">Stripe</td>
-                        <td class="d-none d-sm-table-cell">
-                            <span class="font-size-sm text-muted">October 7, 2017 12:16</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-center"></td>
-                        <td class="font-w600 text-success">+ $156,00</td>
-                        <td class="font-size-sm">Stripe</td>
-                        <td class="d-none d-sm-table-cell">
-                            <span class="font-size-sm text-muted">October 27, 2017 12:16</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-center"></td>
-                        <td class="font-w600 text-success">+ $291,00</td>
-                        <td class="font-size-sm">Stripe</td>
-                        <td class="d-none d-sm-table-cell">
-                            <span class="font-size-sm text-muted">October 9, 2017 12:16</span>
-                        </td>
-                    </tr>
+                    @Html.Action("ListarDespesasParceladas", "DespesaParcelada")
                 </tbody>
             </table>
         </div>
     </div>
 </div>
-<div>
-
-</div>
-
-@Html.Action("ListarDespesasFixas", "DespesaFixa")
 <!-- FINAL TABELA -->

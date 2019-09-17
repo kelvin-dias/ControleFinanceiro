@@ -129,9 +129,9 @@
     <Compile Include="DAL\Entidades\DespesaMensalDAL.cs" />
     <Compile Include="DAL\Entidades\DespesaParceladaDAL.cs" />
     <Compile Include="DAL\Tabelas\DashboardDAL.cs" />
-    <Compile Include="Migrations\20190911144859_Inicial.cs" />
-    <Compile Include="Migrations\20190911144859_Inicial.designer.cs">
-      <DependentUpon>20190911144859_Inicial.cs</DependentUpon>
+    <Compile Include="Migrations\20190917142308_Inicial2.cs" />
+    <Compile Include="Migrations\20190917142308_Inicial2.designer.cs">
+      <DependentUpon>20190917142308_Inicial2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\EFContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -149,6 +149,7 @@
       <Name>Modelo</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

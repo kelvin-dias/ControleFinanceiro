@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Modelo.Entidades;
+using Persistencia.Context;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Persistencia.DAL.Entidades
 {
-    class DespesaParceladaDAL
+    public class DespesaParceladaDAL
     {
+        private EFContext context = new EFContext();
+
+        public IQueryable<DespesaParcelada> ObterDespesasParceladas()
+        {
+            return context.DespesasParceladas.OrderBy(x => x.Valor);
+        }
     }
 }

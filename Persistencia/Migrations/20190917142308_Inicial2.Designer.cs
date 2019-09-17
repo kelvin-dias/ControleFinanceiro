@@ -10,8 +10,8 @@ using Persistencia.Context;
 namespace Persistencia.Migrations
 {
     [DbContext(typeof(EFContext))]
-    [Migration("20190911144859_Inicial")]
-    partial class Inicial
+    [Migration("20190917142308_Inicial2")]
+    partial class Inicial2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -33,7 +33,7 @@ namespace Persistencia.Migrations
 
                     b.Property<string>("NomeItem");
 
-                    b.Property<double>("Valor");
+                    b.Property<decimal>("Valor");
 
                     b.HasKey("DespesaFixaId");
 
@@ -50,7 +50,7 @@ namespace Persistencia.Migrations
 
                     b.Property<string>("NomeItem");
 
-                    b.Property<double>("Valor");
+                    b.Property<decimal>("Valor");
 
                     b.HasKey("DespesaMensalId");
 
@@ -73,7 +73,7 @@ namespace Persistencia.Migrations
 
                     b.Property<bool>("StatusPagamento");
 
-                    b.Property<double>("Valor");
+                    b.Property<decimal>("Valor");
 
                     b.Property<double>("ValorParcela");
 

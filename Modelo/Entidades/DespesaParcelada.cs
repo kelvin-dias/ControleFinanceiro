@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.ComponentModel.DataAnnotations;
 
 namespace Modelo.Entidades
 {
@@ -10,7 +8,9 @@ namespace Modelo.Entidades
         public int DespesaParceladaId { get; set; }
         public string NomeItem { get; set; }
         public double ValorParcela { get; set; }
-        public double Valor { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:N2}")]
+        public decimal Valor { get; set; }
         public DateTime DataHora { get; set; }
         public int QuantidadeParcela { get; set; }
         public string Categoria { get; set; }

@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Modelo.Entidades.DespesaMensal>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td class="text-center"></td>
+        <td class="font-w600 text-danger">-R$@item.Valor</td>
+        <td class="font-size-sm">Stripe</td>
+        <td class="d-none d-sm-table-cell">
+            <span class="font-size-sm text-muted">October 28, 2017 12:16</span>
+        </td>
+    </tr>
+}
+

@@ -14,7 +14,9 @@ namespace Persistencia.DAL.Entidades
 
         public IQueryable<DespesaFixa> ObterDespesasFixas()
         {
-            return context.DespesasFixas.OrderBy(x => x.Valor);
+
+                var teste = context.DespesasFixas.OrderBy(x => x.Valor);
+            return teste;
         }
     }
 }

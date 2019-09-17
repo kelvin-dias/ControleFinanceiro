@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Persistencia.Migrations
 {
-    public partial class Inicial : Migration
+    public partial class Inicial2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,7 +15,7 @@ namespace Persistencia.Migrations
                     DespesaFixaId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     NomeItem = table.Column<string>(nullable: true),
-                    Valor = table.Column<double>(nullable: false),
+                    Valor = table.Column<decimal>(nullable: false),
                     DataHora = table.Column<DateTime>(nullable: false),
                     Categoria = table.Column<string>(nullable: true)
                 },
@@ -31,7 +31,7 @@ namespace Persistencia.Migrations
                     DespesaMensalId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     NomeItem = table.Column<string>(nullable: true),
-                    Valor = table.Column<double>(nullable: false),
+                    Valor = table.Column<decimal>(nullable: false),
                     DataHora = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
@@ -47,7 +47,7 @@ namespace Persistencia.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     NomeItem = table.Column<string>(nullable: true),
                     ValorParcela = table.Column<double>(nullable: false),
-                    Valor = table.Column<double>(nullable: false),
+                    Valor = table.Column<decimal>(nullable: false),
                     DataHora = table.Column<DateTime>(nullable: false),
                     QuantidadeParcela = table.Column<int>(nullable: false),
                     Categoria = table.Column<string>(nullable: true),

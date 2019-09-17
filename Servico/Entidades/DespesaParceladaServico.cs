@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Persistencia.DAL.Entidades;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Servico.Entidades
 {
-    class DespesaParceladaServico
+    public class DespesaParceladaServico
     {
+        DespesaParceladaDAL despesasParceladasDAL = new DespesaParceladaDAL();
+
+        public IQueryable ObterDespesasParceladas()
+        {
+            return despesasParceladasDAL.ObterDespesasParceladas();
+        }
     }
 }
