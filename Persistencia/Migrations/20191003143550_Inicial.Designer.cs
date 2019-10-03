@@ -10,8 +10,8 @@ using Persistencia.Context;
 namespace Persistencia.Migrations
 {
     [DbContext(typeof(EFContext))]
-    [Migration("20190917142308_Inicial2")]
-    partial class Inicial2
+    [Migration("20191003143550_Inicial")]
+    partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -80,6 +80,44 @@ namespace Persistencia.Migrations
                     b.HasKey("DespesaParceladaId");
 
                     b.ToTable("DESPESAS_PARCELADAS");
+                });
+
+            modelBuilder.Entity("Modelo.Entidades.ReceitaAdicional", b =>
+                {
+                    b.Property<int?>("ReceitaAdicionalId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("DataHora");
+
+                    b.Property<string>("NomeItem");
+
+                    b.Property<string>("TipoReceita");
+
+                    b.Property<decimal>("Valor");
+
+                    b.HasKey("ReceitaAdicionalId");
+
+                    b.ToTable("RECEITAS_ADICIONAIS");
+                });
+
+            modelBuilder.Entity("Modelo.Entidades.ReceitaMensal", b =>
+                {
+                    b.Property<int?>("ReceitaMensalId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("DataHora");
+
+                    b.Property<string>("NomeReceita");
+
+                    b.Property<string>("TipoReceita");
+
+                    b.Property<decimal>("Valor");
+
+                    b.HasKey("ReceitaMensalId");
+
+                    b.ToTable("RECEITAS_MENSAIS");
                 });
 #pragma warning restore 612, 618
         }

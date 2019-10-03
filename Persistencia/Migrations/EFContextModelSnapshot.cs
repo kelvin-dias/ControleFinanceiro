@@ -79,6 +79,44 @@ namespace Persistencia.Migrations
 
                     b.ToTable("DESPESAS_PARCELADAS");
                 });
+
+            modelBuilder.Entity("Modelo.Entidades.ReceitaAdicional", b =>
+                {
+                    b.Property<int?>("ReceitaAdicionalId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("DataHora");
+
+                    b.Property<string>("NomeItem");
+
+                    b.Property<string>("TipoReceita");
+
+                    b.Property<decimal>("Valor");
+
+                    b.HasKey("ReceitaAdicionalId");
+
+                    b.ToTable("RECEITAS_ADICIONAIS");
+                });
+
+            modelBuilder.Entity("Modelo.Entidades.ReceitaMensal", b =>
+                {
+                    b.Property<int?>("ReceitaMensalId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("DataHora");
+
+                    b.Property<string>("NomeReceita");
+
+                    b.Property<string>("TipoReceita");
+
+                    b.Property<decimal>("Valor");
+
+                    b.HasKey("ReceitaMensalId");
+
+                    b.ToTable("RECEITAS_MENSAIS");
+                });
 #pragma warning restore 612, 618
         }
     }

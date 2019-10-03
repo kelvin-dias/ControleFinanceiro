@@ -231,10 +231,14 @@
         assets/js/core/jquery.countTo.min.js
         assets/js/core/js.cookie.min.js
     -->
-    <script src="~/Template/assets/js/core/jquery.min.js"></script>
-    <script src="~/Template/assets/js/codebase.app.min.js"></script>
-    <script src="~/Template/assets/js/codebase.core.min.js"></script>
-    <script src="~/Pages/_LayoutPage.js"></script>
+    <script src="@Url.Content("~/Scripts/jquery-3.4.1.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/bootstrap.min.js")"></script>
+    <script src="@Url.Content("~/Template/assets/js/codebase.app.min.js")"></script>
+    <script src="@Url.Content("~/Template/assets/js/codebase.core.min.js")"></script>
+    <script src="@Url.Content("~/Template/assets/js/plugins/jquery_mask/jquery.mask.min.js")"></script>
+
+
+    @RenderSection("ScriptPage", false);
 
 </body>
 </html>

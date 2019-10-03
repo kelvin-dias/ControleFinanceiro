@@ -129,9 +129,9 @@
     <Compile Include="DAL\Entidades\DespesaMensalDAL.cs" />
     <Compile Include="DAL\Entidades\DespesaParceladaDAL.cs" />
     <Compile Include="DAL\Tabelas\DashboardDAL.cs" />
-    <Compile Include="Migrations\20190917142308_Inicial2.cs" />
-    <Compile Include="Migrations\20190917142308_Inicial2.designer.cs">
-      <DependentUpon>20190917142308_Inicial2.cs</DependentUpon>
+    <Compile Include="Migrations\20191003143550_Inicial.cs" />
+    <Compile Include="Migrations\20191003143550_Inicial.designer.cs">
+      <DependentUpon>20191003143550_Inicial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\EFContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

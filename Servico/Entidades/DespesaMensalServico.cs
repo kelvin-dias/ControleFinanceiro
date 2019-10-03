@@ -1,19 +1,21 @@
-﻿using Persistencia.DAL.Entidades;
-using System;
-using System.Collections.Generic;
+﻿using Modelo.Entidades;
+using Persistencia.DAL.Entidades;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Servico.Entidades
 {
-     public class DespesaMensalServico
+    public class DespesaMensalServico
     {
         DespesaMensalDAL despesasMensaisDAL = new DespesaMensalDAL();
 
         public IQueryable ObterDespesasMensais()
         {
             return despesasMensaisDAL.ObterDespesasFixas();
+        }
+
+        public void AdicionarDespesaMensal(DespesaMensal despesaMensal)
+        {
+            despesasMensaisDAL.AdicionarDespesaMensal(despesaMensal);
         }
     }
 }

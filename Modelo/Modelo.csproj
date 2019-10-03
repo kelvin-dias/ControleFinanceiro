@@ -45,6 +45,8 @@
     <Compile Include="Entidades\DespesaFixa.cs" />
     <Compile Include="Entidades\DespesaMensal.cs" />
     <Compile Include="Entidades\DespesaParcelada.cs" />
+    <Compile Include="Entidades\ReceitaAdicional.cs" />
+    <Compile Include="Entidades\ReceitaMensal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Persistencia.Migrations
 {
-    public partial class Inicial2 : Migration
+    public partial class Inicial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -57,6 +57,38 @@ namespace Persistencia.Migrations
                 {
                     table.PrimaryKey("PK_DESPESAS_PARCELADAS", x => x.DespesaParceladaId);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "RECEITAS_ADICIONAIS",
+                columns: table => new
+                {
+                    ReceitaAdicionalId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    NomeItem = table.Column<string>(nullable: true),
+                    Valor = table.Column<decimal>(nullable: false),
+                    DataHora = table.Column<DateTime>(nullable: false),
+                    TipoReceita = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_RECEITAS_ADICIONAIS", x => x.ReceitaAdicionalId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "RECEITAS_MENSAIS",
+                columns: table => new
+                {
+                    ReceitaMensalId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    NomeReceita = table.Column<string>(nullable: true),
+                    Valor = table.Column<decimal>(nullable: false),
+                    DataHora = table.Column<DateTime>(nullable: false),
+                    TipoReceita = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_RECEITAS_MENSAIS", x => x.ReceitaMensalId);
+                });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -69,6 +101,12 @@ namespace Persistencia.Migrations
 
             migrationBuilder.DropTable(
                 name: "DESPESAS_PARCELADAS");
+
+            migrationBuilder.DropTable(
+                name: "RECEITAS_ADICIONAIS");
+
+            migrationBuilder.DropTable(
+                name: "RECEITAS_MENSAIS");
         }
     }
 }

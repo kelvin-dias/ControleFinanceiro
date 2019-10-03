@@ -222,6 +222,8 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Scripts\Views\DespesaMensal\AdicionarDespesaMensal.js" />
+    <Content Include="Scripts\Views\Home\Dashboard.js" />
     <Content Include="Template\assets\css\codebase.min.css" />
     <Content Include="Template\assets\css\pulse.min.css" />
     <Content Include="Template\assets\fonts\fontawesome4\fontawesome-webfont.svg" />
@@ -3411,6 +3413,8 @@
     <Content Include="Template\assets\js\plugins\jquery-validation\localization\methods_pt.min.js" />
     <Content Include="Template\assets\js\plugins\jquery-vide\jquery.vide.js" />
     <Content Include="Template\assets\js\plugins\jquery-vide\jquery.vide.min.js" />
+    <Content Include="Template\assets\js\plugins\jquery_mask\jquery.mask.js" />
+    <Content Include="Template\assets\js\plugins\jquery_mask\jquery.mask.min.js" />
     <Content Include="Template\assets\js\plugins\magnific-popup\jquery.magnific-popup.js" />
     <Content Include="Template\assets\js\plugins\magnific-popup\jquery.magnific-popup.min.js" />
     <Content Include="Template\assets\js\plugins\magnific-popup\magnific-popup.css" />
@@ -3741,6 +3745,7 @@
     <Content Include="Views\DespesaFixa\ListarDespesasFixas.cshtml" />
     <Content Include="Views\DespesaMensal\ListarDespesasMensais.cshtml" />
     <Content Include="Views\DespesaParcelada\ListarDespesasParceladas.cshtml" />
+    <Content Include="Views\DespesaMensal\AdicionarDespesaMensal.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
