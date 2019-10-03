@@ -225,6 +225,11 @@
     <Content Include="Scripts\Views\DespesaMensal\AdicionarDespesaMensal.js" />
     <Content Include="Scripts\Views\Home\Dashboard.js" />
     <Content Include="Template\assets\css\codebase.min.css" />
+    <Content Include="Template\assets\css\fontawesome 5.3\css\fontawesome-all.css" />
+    <Content Include="Template\assets\css\fontawesome 5.3\css\fontawesome-all.min.css" />
+    <Content Include="Template\assets\css\fontawesome 5.3\webfonts\fa-brands-400.svg" />
+    <Content Include="Template\assets\css\fontawesome 5.3\webfonts\fa-regular-400.svg" />
+    <Content Include="Template\assets\css\fontawesome 5.3\webfonts\fa-solid-900.svg" />
     <Content Include="Template\assets\css\pulse.min.css" />
     <Content Include="Template\assets\fonts\fontawesome4\fontawesome-webfont.svg" />
     <Content Include="Template\assets\fonts\fontawesome5\fa-brands-400.svg" />
@@ -3746,6 +3751,19 @@
     <Content Include="Views\DespesaMensal\ListarDespesasMensais.cshtml" />
     <Content Include="Views\DespesaParcelada\ListarDespesasParceladas.cshtml" />
     <Content Include="Views\DespesaMensal\AdicionarDespesaMensal.cshtml" />
+    <Content Include="Template\assets\css\fontawesome 5.3\webfonts\fa-brands-400.eot" />
+    <Content Include="Template\assets\css\fontawesome 5.3\webfonts\fa-brands-400.ttf" />
+    <Content Include="Template\assets\css\fontawesome 5.3\webfonts\fa-brands-400.woff" />
+    <Content Include="Template\assets\css\fontawesome 5.3\webfonts\fa-brands-400.woff2" />
+    <Content Include="Template\assets\css\fontawesome 5.3\webfonts\fa-regular-400.eot" />
+    <Content Include="Template\assets\css\fontawesome 5.3\webfonts\fa-regular-400.ttf" />
+    <Content Include="Template\assets\css\fontawesome 5.3\webfonts\fa-regular-400.woff" />
+    <Content Include="Template\assets\css\fontawesome 5.3\webfonts\fa-regular-400.woff2" />
+    <Content Include="Template\assets\css\fontawesome 5.3\webfonts\fa-solid-900.eot" />
+    <Content Include="Template\assets\css\fontawesome 5.3\webfonts\fa-solid-900.ttf" />
+    <Content Include="Template\assets\css\fontawesome 5.3\webfonts\fa-solid-900.woff" />
+    <Content Include="Template\assets\css\fontawesome 5.3\webfonts\fa-solid-900.woff2" />
+    <Content Include="Views\DespesaMensal\TabelaDespesasMensais.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

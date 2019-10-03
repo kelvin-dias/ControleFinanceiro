@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Modelo.Entidades.DespesaMensal>
+
+@{
+    ViewBag.Title = "TabelaDespesasMensais";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<h2>TabelaDespesasMensais</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeItem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Valor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataHora)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeItem)
+        </td>
+        <td>
+            @item.Valor
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataHora)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DespesaMensalId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DespesaMensalId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DespesaMensalId })
+        </td>
+    </tr>
+}
+
+</table>
