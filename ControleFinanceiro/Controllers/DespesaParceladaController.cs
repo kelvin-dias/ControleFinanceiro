@@ -1,4 +1,5 @@
-﻿using Servico.Entidades;
+﻿using Modelo.Entidades;
+using Servico.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,37 @@ namespace ControleFinanceiro.Controllers
         // GET: DespesaParcelada
         public ActionResult ListarDespesasParceladas()
         {
-            return View(despesaParceladaServico.ObterDespesasParceladas());
+            return View(despesaParceladaServico.ObterDespesaParcelada());
+        }
+
+        public ActionResult TabelaDespesaParcelada()
+        {
+            return View(despesaParceladaServico.ObterDespesaParcelada());
+        }
+
+        // GET: DespesaMensal
+        public ActionResult AdicionarDespesaParcelada()
+        {
+            return View();
+        }
+
+        // POST: DespesaMensal
+        [HttpPost]
+        public ActionResult AdicionarDespesaParcelada(DespesaParcelada despesaParcelada)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    despesaParceladaServico.AdicionarDespesaParcelada(despesaParcelada);
+                    return RedirectToAction("TabelaDespesaParcelada");
+                }
+                return View(despesaParcelada);
+            }
+            catch
+            {
+                return View(despesaParcelada);
+            }
         }
     }
 }

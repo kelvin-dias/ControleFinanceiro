@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entidades\DespesaFixa.cs" />
+    <Compile Include="Entidades\DespesaDia.cs" />
     <Compile Include="Entidades\DespesaMensal.cs" />
     <Compile Include="Entidades\DespesaParcelada.cs" />
     <Compile Include="Entidades\ReceitaAdicional.cs" />

@@ -1,6 +1,5 @@
 ﻿using Servico.Tabelas;
 using System;
-using System.Linq;
 using System.Web.Mvc;
 
 namespace ControleFinanceiro.Controllers

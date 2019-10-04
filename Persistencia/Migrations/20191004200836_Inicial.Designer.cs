@@ -10,7 +10,7 @@ using Persistencia.Context;
 namespace Persistencia.Migrations
 {
     [DbContext(typeof(EFContext))]
-    [Migration("20191003143550_Inicial")]
+    [Migration("20191004200836_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -21,9 +21,9 @@ namespace Persistencia.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Modelo.Entidades.DespesaFixa", b =>
+            modelBuilder.Entity("Modelo.Entidades.DespesaDia", b =>
                 {
-                    b.Property<int?>("DespesaFixaId")
+                    b.Property<int?>("DespesaDiaId")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -35,9 +35,9 @@ namespace Persistencia.Migrations
 
                     b.Property<decimal>("Valor");
 
-                    b.HasKey("DespesaFixaId");
+                    b.HasKey("DespesaDiaId");
 
-                    b.ToTable("DESPESAS_FIXAS");
+                    b.ToTable("DESPESAS_DIA");
                 });
 
             modelBuilder.Entity("Modelo.Entidades.DespesaMensal", b =>

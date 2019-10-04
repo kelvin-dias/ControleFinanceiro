@@ -9,12 +9,6 @@ namespace ControleFinanceiro.Controllers
         private DespesaMensalServico despesaMensalServico = new DespesaMensalServico();
 
         // GET: DespesaMensal
-        public ActionResult Index()
-        {
-            return View();
-        }
-
-        // GET: DespesaMensal
         public ActionResult ListarDespesasMensais()
         {
             return View(despesaMensalServico.ObterDespesasMensais());

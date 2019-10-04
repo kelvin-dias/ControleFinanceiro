@@ -3,9 +3,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Modelo.Entidades
 {
-    public class DespesaFixa
+    public class DespesaDia
     {
-        public int? DespesaFixaId { get; set; }
+        public int? DespesaDiaId { get; set; }
         public string NomeItem { get; set; }
 
         [DisplayFormat(DataFormatString = "{0:N2}")]

@@ -3647,7 +3647,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\DespesaFixaController.cs" />
+    <Compile Include="Controllers\DespesaDiaController.cs" />
     <Compile Include="Controllers\DespesaMensalController.cs" />
     <Compile Include="Controllers\DespesaParceladaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -3746,8 +3746,6 @@
     <Content Include="Template\assets\js\plugins\summernote\summernote-lite.js.map" />
     <Content Include="Template\assets\js\plugins\summernote\summernote.js.map" />
     <Content Include="Views\Shared\_LayoutPage.cshtml" />
-    <Content Include="Views\DespesaFixa\AdicionarDespesaFixa.cshtml" />
-    <Content Include="Views\DespesaFixa\ListarDespesasFixas.cshtml" />
     <Content Include="Views\DespesaMensal\ListarDespesasMensais.cshtml" />
     <Content Include="Views\DespesaParcelada\ListarDespesasParceladas.cshtml" />
     <Content Include="Views\DespesaMensal\AdicionarDespesaMensal.cshtml" />
@@ -3764,6 +3762,10 @@
     <Content Include="Template\assets\css\fontawesome 5.3\webfonts\fa-solid-900.woff" />
     <Content Include="Template\assets\css\fontawesome 5.3\webfonts\fa-solid-900.woff2" />
     <Content Include="Views\DespesaMensal\TabelaDespesasMensais.cshtml" />
+    <Content Include="Views\DespesaDia\AdicionarDespesasDia.cshtml" />
+    <Content Include="Views\DespesaDia\TabelaDespesasDia.cshtml" />
+    <Content Include="Views\DespesaParcelada\AdicionarDespesaParcelada.cshtml" />
+    <Content Include="Views\DespesaParcelada\TabelaDespesaParcelada.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

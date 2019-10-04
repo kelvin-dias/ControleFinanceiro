@@ -5,7 +5,7 @@ namespace Modelo.Entidades
 {
     public class DespesaParcelada
     {
-        public int DespesaParceladaId { get; set; }
+        public int? DespesaParceladaId { get; set; }
         public string NomeItem { get; set; }
         public double ValorParcela { get; set; }
 

@@ -1,9 +1,10 @@
-﻿@model Modelo.Entidades.DespesaMensal
+﻿@model Modelo.Entidades.DespesaDia
 
 @{
-    ViewBag.Title = "AdicionarDespesaMensal";
+    ViewBag.Title = "AdicionarDespesasDia";
     Layout = "~/Views/Shared/_LayoutPage.cshtml";
 }
+
 
 @using (Html.BeginForm())
 {
@@ -12,7 +13,7 @@
         <div class="col-md-4 offset-md-4 mt-50">
             <div class="block">
                 <div class="block-header block-header-default">
-                    <h4 class="block-title" align="center">Despesa Mensal</h4>
+                    <h4 class="block-title" align="center">Despesa do Dia Dia</h4>
                 </div>
                 <div class="block-content">
                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -60,11 +61,8 @@
     </div>
 }
 
-@*<div>
-        @Html.ActionLink("Back to List", "AdicionarDespesaMensal")
-    </div>*@
 
 @section	ScriptPage	{
     <script src="@Url.Content("~/Template/assets/js/plugins/jquery_mask/jquery.mask.min.js")"></script>
-    <script src="@Url.Content("~/Scripts/Views/DespesaMensal/AdicionarDespesaMensal.js")"></script>
+    <script src="@Url.Content("~/Scripts/Views/DespesaMensal/AdicionarDespesaDia.js")"></script>
 }

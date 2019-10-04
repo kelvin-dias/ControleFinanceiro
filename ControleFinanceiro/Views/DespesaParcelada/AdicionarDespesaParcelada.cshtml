@@ -1,7 +1,7 @@
-﻿@model Modelo.Entidades.DespesaMensal
+﻿@model Modelo.Entidades.DespesaDia
 
 @{
-    ViewBag.Title = "AdicionarDespesaMensal";
+    ViewBag.Title = "AdicionarDespesaParcelada";
     Layout = "~/Views/Shared/_LayoutPage.cshtml";
 }
 
@@ -12,7 +12,7 @@
         <div class="col-md-4 offset-md-4 mt-50">
             <div class="block">
                 <div class="block-header block-header-default">
-                    <h4 class="block-title" align="center">Despesa Mensal</h4>
+                    <h4 class="block-title" align="center">Despesa Parcelada</h4>
                 </div>
                 <div class="block-content">
                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -66,5 +66,5 @@
 
 @section	ScriptPage	{
     <script src="@Url.Content("~/Template/assets/js/plugins/jquery_mask/jquery.mask.min.js")"></script>
-    <script src="@Url.Content("~/Scripts/Views/DespesaMensal/AdicionarDespesaMensal.js")"></script>
+    <script src="@Url.Content("~/Scripts/Views/DespesaMensal/AdicionarDespesaParcelada.js")"></script>
 }

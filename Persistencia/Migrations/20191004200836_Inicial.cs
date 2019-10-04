@@ -9,10 +9,10 @@ namespace Persistencia.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "DESPESAS_FIXAS",
+                name: "DESPESAS_DIA",
                 columns: table => new
                 {
-                    DespesaFixaId = table.Column<int>(nullable: false)
+                    DespesaDiaId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     NomeItem = table.Column<string>(nullable: true),
                     Valor = table.Column<decimal>(nullable: false),
@@ -21,7 +21,7 @@ namespace Persistencia.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_DESPESAS_FIXAS", x => x.DespesaFixaId);
+                    table.PrimaryKey("PK_DESPESAS_DIA", x => x.DespesaDiaId);
                 });
 
             migrationBuilder.CreateTable(
@@ -94,7 +94,7 @@ namespace Persistencia.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "DESPESAS_FIXAS");
+                name: "DESPESAS_DIA");
 
             migrationBuilder.DropTable(
                 name: "DESPESAS_MENSAIS");
