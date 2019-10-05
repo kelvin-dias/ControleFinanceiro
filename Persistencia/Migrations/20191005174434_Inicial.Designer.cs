@@ -10,7 +10,7 @@ using Persistencia.Context;
 namespace Persistencia.Migrations
 {
     [DbContext(typeof(EFContext))]
-    [Migration("20191004200836_Inicial")]
+    [Migration("20191005174434_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -59,7 +59,7 @@ namespace Persistencia.Migrations
 
             modelBuilder.Entity("Modelo.Entidades.DespesaParcelada", b =>
                 {
-                    b.Property<int>("DespesaParceladaId")
+                    b.Property<int?>("DespesaParceladaId")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 

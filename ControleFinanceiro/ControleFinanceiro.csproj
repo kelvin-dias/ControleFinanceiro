@@ -3651,6 +3651,7 @@
     <Compile Include="Controllers\DespesaMensalController.cs" />
     <Compile Include="Controllers\DespesaParceladaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ReceitaMensalController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -3766,6 +3767,8 @@
     <Content Include="Views\DespesaDia\TabelaDespesasDia.cshtml" />
     <Content Include="Views\DespesaParcelada\AdicionarDespesaParcelada.cshtml" />
     <Content Include="Views\DespesaParcelada\TabelaDespesaParcelada.cshtml" />
+    <Content Include="Views\ReceitaMensal\TabelaReceitaMensal.cshtml" />
+    <Content Include="Views\ReceitaMensal\AdicionarReceitaMensal.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -3773,7 +3776,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\ReceitaFixa\" />
+  </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>

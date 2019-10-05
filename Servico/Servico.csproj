@@ -44,6 +44,7 @@
     <Compile Include="Entidades\DespesaDiaServico.cs" />
     <Compile Include="Entidades\DespesaMensalServico.cs" />
     <Compile Include="Entidades\DespesaParceladaServico.cs" />
+    <Compile Include="Entidades\ReceitaMensalServico.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tabelas\DashboardServico.cs" />
   </ItemGroup>

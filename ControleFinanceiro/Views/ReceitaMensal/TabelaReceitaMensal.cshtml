@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Modelo.Entidades.ReceitaMensal>
+
+@{
+    ViewBag.Title = "TabelaReceitaMensal";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<div class="row block-content">
+    <div class="col-md-12 justify-content-center in row">
+        <h1>
+            <span class="font-w300">Receitas Mensais</span>
+        </h1>
+    </div>
+</div>
+
+<div class="block block-rounded">
+    <div class="block-content bg-body-light">
+        <!-- Search -->
+        <form action="be_pages_ecom_orders.html" method="post" onsubmit="return false;">
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search orders..">
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-secondary">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!-- END Search -->
+    </div>
+    <div class="block-content">
+        <!-- Orders Table -->
+        <table class="table table-borderless table-striped">
+            <thead>
+                <tr>
+                    <th class="text-left">@Html.DisplayNameFor(model => model.NomeReceita)</th>
+                    <th class="text-center">@Html.DisplayNameFor(model => model.DataHora)</th>
+                    <th class="text-right">@Html.DisplayNameFor(model => model.Valor)</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <a class="font-w600" href="#">@Html.DisplayFor(modelItem => item.NomeReceita)</a>
+                        </td>
+                        <td class="text-center">
+                            @Html.DisplayFor(modelItem => item.DataHora)
+                        </td>
+                        <td class="text-right">
+                            <span class="text-black">R$@item.Valor</span>
+                        </td>
+                    </tr>
+                }
+                <tr class="table-success">
+                    <td colspan="2" class="text-left font-w600 text-uppercase">Valor Total:</td>
+
+                    <td class="text-right font-w600">R$0,00</td>
+                </tr>
+
+            </tbody>
+        </table>
+        <!-- END Orders Table -->
+    </div>
+</div>

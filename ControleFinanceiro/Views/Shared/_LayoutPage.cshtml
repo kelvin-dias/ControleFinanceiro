@@ -73,7 +73,7 @@
                                     @Html.ActionLink("Adicionar Despesa", "AdicionarDespesasDia", "DespesaDia")
                                 </li>
                                 <li>
-                                    @Html.ActionLink("Consultar Despesa", "TabelaDespesasDia", "DespesaDia")
+                                    @Html.ActionLink("Consultar Despesas", "TabelaDespesasDia", "DespesaDia")
                                 </li>
                             </ul>
                         </li>
@@ -85,7 +85,7 @@
                                     @Html.ActionLink("Adicionar Despesa", "AdicionarDespesaMensal", "DespesaMensal")
                                 </li>
                                 <li>
-                                    @Html.ActionLink("Consultar Despesa", "TabelaDespesasMensais", "DespesaMensal")
+                                    @Html.ActionLink("Consultar Despesas", "TabelaDespesasMensais", "DespesaMensal")
                                 </li>
                             </ul>
                         </li>
@@ -97,13 +97,21 @@
                                     @Html.ActionLink("Adicionar Despesa", "AdicionarDespesaParcelada", "DespesaParcelada")
                                 </li>
                                 <li>
-                                    @Html.ActionLink("Consultar Despesa", "TabelaDespesaParcelada", "DespesaParcelada")
+                                    @Html.ActionLink("Consultar Despesas", "TabelaDespesaParcelada", "DespesaParcelada")
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-main-heading"><span class="sidebar-mini-visible">RE</span><span class="sidebar-mini-hidden">Receitas</span></li>
                         <li>
-                            <a href=""><i class="si si-user"></i><span class="sidebar-mini-hide">Fixas</span></a>
+                            <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-docs"></i><span class="sidebar-mini-hide">Mensais</span></a>
+                            <ul>
+                                <li>
+                                    @Html.ActionLink("Adicionar Receita", "AdicionarReceitaMensal", "ReceitaMensal")
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Consultar Receitas", "TabelaReceitaMensal", "ReceitaMensal")
+                                </li>
+                            </ul>
                         </li>
                         <li>
                             <a href=""><i class="si si-lock"></i><span class="sidebar-mini-hide">Extras</span></a>

@@ -57,7 +57,7 @@ namespace Persistencia.Migrations
 
             modelBuilder.Entity("Modelo.Entidades.DespesaParcelada", b =>
                 {
-                    b.Property<int>("DespesaParceladaId")
+                    b.Property<int?>("DespesaParceladaId")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
