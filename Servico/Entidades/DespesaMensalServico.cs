@@ -13,6 +13,11 @@ namespace Servico.Entidades
             return despesasMensaisDAL.ObterDespesasFixas();
         }
 
+        public decimal ObterSomaDespesasMensal(int mes, int ano)
+        {
+            return despesasMensaisDAL.ObterSomaDespesasMensal(mes, ano);
+        }
+
         public void AdicionarDespesaMensal(DespesaMensal despesaMensal)
         {
             despesasMensaisDAL.AdicionarDespesaMensal(despesaMensal);

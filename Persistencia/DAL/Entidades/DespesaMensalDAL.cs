@@ -27,5 +27,13 @@ namespace Persistencia.DAL.Entidades
 
             context.SaveChanges();
         }
+
+        public decimal ObterSomaDespesasMensal(int mes, int ano)
+        {
+            var somaDespesasMensal = context.DespesasMensais.Where(x => x.DataHora.Month == mes && x.DataHora.Year == ano).Sum(x => x.Valor);
+
+
+            return somaDespesasMensal;
+        }
     }
 }
