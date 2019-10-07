@@ -8,7 +8,12 @@ namespace ControleFinanceiro.Controllers
     {
         private DashboardServico dashboardServico = new DashboardServico();
 
-        
+        // GET: Home
+        public ActionResult Login()
+        {
+            return View();
+        }
+
         // GET: Home
         public ActionResult Dashboard()
         {

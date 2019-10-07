@@ -1,17 +1,17 @@
 ﻿using Modelo.Entidades;
+using Modelo.Tabelas;
 using Microsoft.EntityFrameworkCore;
 
 namespace Persistencia.Context
 {
     public class EFContext : DbContext
     {
-
         public DbSet<DespesaParcelada> DespesasParceladas { get; set; }
         public DbSet<DespesaDia> DespesasDia { get; set; }
         public DbSet<DespesaMensal> DespesasMensais { get; set; }
         public DbSet<ReceitaMensal> ReceitasMensais { get; set; }
         public DbSet<ReceitaAdicional> ReceitaAdicionals { get; set; }
-
+        public DbSet<Usuario> Usuarios { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
