@@ -222,8 +222,12 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Scripts\Views\DespesaDia\AdicionarDespesaDia.js" />
     <Content Include="Scripts\Views\DespesaMensal\AdicionarDespesaMensal.js" />
+    <Content Include="Scripts\Views\DespesaParcelada\AdicionarDespesaParcelada.js" />
     <Content Include="Scripts\Views\Home\Dashboard.js" />
+    <Content Include="Scripts\Views\ReceitaAdicional\AdicionarReceitaAdicional.js" />
+    <Content Include="Scripts\Views\ReceitaMensal\AdicionarReceitaMensal.js" />
     <Content Include="Template\assets\css\codebase.min.css" />
     <Content Include="Template\assets\css\fontawesome 5.3\css\fontawesome-all.css" />
     <Content Include="Template\assets\css\fontawesome 5.3\css\fontawesome-all.min.css" />

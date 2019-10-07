@@ -17,5 +17,10 @@ namespace Servico.Entidades
         {
             despesasParceladasDAL.AdicionarDespesaParcelada(despesaParcelada);
         }
+
+        public decimal ObterSomaDespesasParceladas(int mes, int ano)
+        {
+            return despesasParceladasDAL.ObterSomaDespesasParceladas(mes, ano);
+        }
     }
 }

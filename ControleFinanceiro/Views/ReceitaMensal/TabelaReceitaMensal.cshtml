@@ -45,7 +45,7 @@
                 {
                     <tr>
                         <td>
-                            <a class="font-w600" href="#">@Html.DisplayFor(modelItem => item.NomeReceita)</a>
+                            <a class="font-w600 text-success" href="#">@Html.DisplayFor(modelItem => item.NomeReceita)</a>
                         </td>
                         <td class="text-center">
                             @Html.DisplayFor(modelItem => item.DataHora)
@@ -58,7 +58,7 @@
                 <tr class="table-success">
                     <td colspan="2" class="text-left font-w600 text-uppercase">Valor Total:</td>
 
-                    <td class="text-right font-w600">R$0,00</td>
+                    <td class="text-right font-w600">R$@ViewBag.SomaDespesasMensalTotal</td>
                 </tr>
 
             </tbody>

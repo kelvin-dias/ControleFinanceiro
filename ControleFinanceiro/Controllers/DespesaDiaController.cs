@@ -1,5 +1,6 @@
 ﻿using Modelo.Entidades;
 using Servico.Entidades;
+using System;
 using System.Web.Mvc;
 
 namespace ControleFinanceiro.Controllers
@@ -17,6 +18,12 @@ namespace ControleFinanceiro.Controllers
 
         public ActionResult TabelaDespesasDia()
         {
+            var mes = DateTime.Now.Month;
+            var ano = DateTime.Now.Year;
+
+            var somaTotalDespesasMensal = despesaDiaServico.ObterSomaDespesasDia(mes, ano);
+            ViewBag.SomaDespesasDiaTotal = somaTotalDespesasMensal;
+
             return View(despesaDiaServico.ObterDespesasDia());
         }
 

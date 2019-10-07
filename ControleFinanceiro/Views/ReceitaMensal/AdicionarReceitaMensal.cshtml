@@ -5,61 +5,62 @@
     Layout = "~/Views/Shared/_LayoutPage.cshtml";
 }
 
-<h2>AdicionarReceitaMensal</h2>
-
-
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>ReceitaMensal</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.NomeReceita, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.NomeReceita, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.NomeReceita, "", new { @class = "text-danger" })
-            </div>
-        </div>
+    <div class="row">
+        <div class="col-md-4 offset-md-4 mt-50">
+            <div class="block">
+                <div class="block-header block-header-default">
+                    <h4 class="block-title" align="center">Receita Mensal</h4>
+                </div>
+                <div class="block-content">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <i class="fas fa-edit"></i>
+                            @Html.LabelFor(model => model.NomeReceita, htmlAttributes: new { @class = "control-label col-md-8 p-0" })
+                        </div>
+                        <div class="col-md-12">
+                            @Html.EditorFor(model => model.NomeReceita, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.NomeReceita, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Valor, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Valor, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Valor, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <i class="fas fa-donate"></i>
+                            @Html.LabelFor(model => model.Valor, htmlAttributes: new { @class = "control-label col-md-8 p-0" })
+                        </div>
+                        <div class="col-md-12">
+                            @Html.EditorFor(model => model.Valor, new { htmlAttributes = new { @class = "form-control valores" } })
+                            @Html.ValidationMessageFor(model => model.Valor, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.DataHora, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.DataHora, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.DataHora, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <i class="far fa-calendar-alt"></i>
+                            @Html.LabelFor(model => model.DataHora, htmlAttributes: new { @class = "control-label col-md-2 p-0" })
+                        </div>
+                        <div class="col-md-12">
+                            @Html.EditorFor(model => model.DataHora, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.DataHora, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.TipoReceita, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.TipoReceita, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.TipoReceita, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <button type="submit" class="btn btn-success btn-lg btn-block">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
-
-<script src="~/Scripts/jquery-3.3.1.min.js"></script>
-<script src="~/Scripts/jquery.validate.min.js"></script>
-<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+@section	ScriptPage	{
+    <script src="@Url.Content("~/Template/assets/js/plugins/jquery_mask/jquery.mask.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/Views/ReceitaMensal/AdicionarReceitaMensal.js")"></script>
+}

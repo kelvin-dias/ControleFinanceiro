@@ -26,6 +26,11 @@ namespace ControleFinanceiro.Controllers
 
         public ActionResult TabelaDespesaParcelada()
         {
+            var mes = DateTime.Now.Month;
+            var ano = DateTime.Now.Year;
+            var somaTotalDespesasParceladas = despesaParceladaServico.ObterSomaDespesasParceladas(mes, ano);
+            ViewBag.SomaDespesasParceladasTotal = somaTotalDespesasParceladas;
+
             return View(despesaParceladaServico.ObterDespesaParcelada());
         }
 

@@ -17,5 +17,10 @@ namespace Servico.Entidades
         {
             despesasDiaDAL.AdicionarDespesaDia(despesaMensal);
         }
+
+        public decimal ObterSomaDespesasDia(int mes, int ano)
+        {
+            return despesasDiaDAL.ObterSomaDespesasDia(mes, ano);
+        }
     }
 }

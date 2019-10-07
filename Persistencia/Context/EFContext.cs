@@ -15,7 +15,7 @@ namespace Persistencia.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\kelvi\source\repos\ControleFinanceiro\ControleFinanceiro\App_Data\CONTROLE_FINANCEIRO.mdf;Integrated Security=True;Connect Timeout=90");
+            optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Fadami\source\repos\ControleFinanceiro\ControleFinanceiro\App_Data\CONTROLE_FINANCEIRO.mdf;Integrated Security=True");
         }
 
         //Define o nome das Tabelas no Banco.
