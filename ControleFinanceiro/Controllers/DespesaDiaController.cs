@@ -21,8 +21,8 @@ namespace ControleFinanceiro.Controllers
             var mes = DateTime.Now.Month;
             var ano = DateTime.Now.Year;
 
-            var somaTotalDespesasMensal = despesaDiaServico.ObterSomaDespesasDia(mes, ano);
-            ViewBag.SomaDespesasDiaTotal = somaTotalDespesasMensal;
+            var somaTotalDespesasDia = despesaDiaServico.ObterSomaDespesasDia(mes, ano);
+            ViewBag.SomaDespesasDiaTotal = somaTotalDespesasDia;
 
             return View(despesaDiaServico.ObterDespesasDia());
         }

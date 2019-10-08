@@ -17,5 +17,10 @@ namespace Servico.Entidades
         {
             receitaMensalDAL.AdicionarReceitaMensal(receitaMensal);
         }
+
+        public decimal ObterSomaReceitaMensal(int mes, int ano)
+        {
+            return receitaMensalDAL.ObterSomaReceitaMensal(mes, ano);
+        }
     }
 }

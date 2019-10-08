@@ -21,6 +21,11 @@ namespace ControleFinanceiro.Controllers
         // GET: ReceitaMensal
         public ActionResult TabelaReceitaMensal()
         {
+            var mes = DateTime.Now.Month;
+            var ano = DateTime.Now.Year;
+            var somaTotalReceitaMensal = receitaMensalServico.ObterSomaReceitaMensal(mes, ano);
+            ViewBag.SomaReceitaMensalTotal = somaTotalReceitaMensal;
+
             return View(receitaMensalServico.ObterReceitaMensal());
         }
 

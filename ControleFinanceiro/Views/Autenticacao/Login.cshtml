@@ -1,0 +1,96 @@
+﻿@model Modelo.ViewModelo.LoginViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,400i,600,700">
+    <link href="~/Template/assets/css/codebase.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="page-container" class="main-content-boxed">
+        <main id="main-container">
+            <div class="bg-body-dark bg-pattern" style="background-image: url('assets/media/various/bg-pattern-inverse.png');">
+                <div class="row mx-0 justify-content-center">
+                    <div class="hero-static col-lg-6 col-xl-4">
+                        <div class="content content-full overflow-hidden">
+                            <!-- Header -->
+                            <div class="py-30 text-center">
+                                <a class="link-effect font-w700" href="index.html">
+                                    <i class="si si-fire"></i>
+                                    <span class="font-size-xl text-primary-dark">code</span><span class="font-size-xl">base</span>
+                                </a>
+                                <h1 class="h4 font-w700 mt-30 mb-10">Welcome to Your Dashboard</h1>
+                                <h2 class="h5 font-w400 text-muted mb-0">It’s a great day today!</h2>
+                            </div>
+
+                            @using (Html.BeginForm())
+                            {
+                                @Html.AntiForgeryToken()
+
+                                <div class="block block-themed block-rounded block-shadow">
+                                    <div class="block-header bg-gd-dusk">
+                                        <h3 class="block-title">Please Sign In</h3>
+                                    </div>
+                                    <div class="block-content">
+                                        <div class="form-horizontal">
+                                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                            @Html.HiddenFor(model => model.UrlRetorno)
+
+                                            <div class="form-group row">
+                                                @Html.LabelFor(model => model.LoginUsuario, htmlAttributes: new { @class = "control-label col-12" })
+                                                <div class="col-12">
+                                                    @Html.EditorFor(model => model.LoginUsuario, new { htmlAttributes = new { @class = "form-control" } })
+                                                    @Html.ValidationMessageFor(model => model.LoginUsuario, "", new { @class = "text-danger" })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                @Html.LabelFor(model => model.Senha, htmlAttributes: new { @class = "control-label col-12" })
+                                                <div class="col-12">
+                                                    @Html.EditorFor(model => model.Senha, new { htmlAttributes = new { @class = "form-control" } })
+                                                    @Html.ValidationMessageFor(model => model.Senha, "", new { @class = "text-danger" })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row mb-0">
+                                                <div class="col-sm-6 d-sm-flex align-items-center push">
+                                                    <div class="custom-control custom-checkbox mr-auto ml-0 mb-0">
+                                                        <input type="checkbox" class="custom-control-input" id="login-remember-me" name="login-remember-me">
+                                                        <label class="custom-control-label" for="login-remember-me">Remember Me</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6 text-sm-right push">
+                                                    <button type="submit" class="btn btn-alt-primary">
+                                                        <i class="si si-login mr-10"></i> Sign In
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            <!-- END Sign In Form -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END Page Content -->
+
+        </main>
+        <!-- END Main Container -->
+    </div>
+
+    <script src="@Url.Content("~/Template/assets/js/codebase.app.min.js")"></script>
+    <script src="@Url.Content("~/Template/assets/js/codebase.core.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.min.js")"></script>
+    <script src="@Url.Content("~/Template/assets/js/pages/op_auth_signin.min.js")"></script>
+</body>
+</html>

@@ -27,5 +27,13 @@ namespace Persistencia
 
             context.SaveChanges();
         }
+
+        public decimal ObterSomaReceitaMensal(int mes, int ano)
+        {
+            var somaReceitaMensal = context.ReceitasMensais.Where(x => x.DataHora.Month == mes && x.DataHora.Year == ano).Sum(x => x.Valor);
+
+
+            return somaReceitaMensal;
+        }
     }
 }

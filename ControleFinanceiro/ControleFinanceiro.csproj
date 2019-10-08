@@ -3671,6 +3671,7 @@
     <Compile Include="Controllers\DespesaMensalController.cs" />
     <Compile Include="Controllers\DespesaParceladaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PainelController.cs" />
     <Compile Include="Controllers\ReceitaMensalController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -3791,6 +3792,8 @@
     <Content Include="Views\ReceitaMensal\TabelaReceitaMensal.cshtml" />
     <Content Include="Views\ReceitaMensal\AdicionarReceitaMensal.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Autenticacao\Login.cshtml" />
+    <Content Include="Views\Painel\Mensagens.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -3799,7 +3802,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\Autenticacao\" />
     <Folder Include="Views\ReceitaFixa\" />
   </ItemGroup>
   <ItemGroup>
