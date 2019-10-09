@@ -1,14 +1,14 @@
-﻿@model IEnumerable<Modelo.Entidades.DespesaMensal>
+﻿@model IEnumerable<Modelo.Entidades.ReceitaExtra>
 
 @{
-    ViewBag.Title = "TabelaDespesasMensais";
+    ViewBag.Title = "TabelaReceitaExtra";
     Layout = "~/Views/Shared/_LayoutPage.cshtml";
 }
 
 <div class="row block-content">
     <div class="col-md-12 justify-content-center in row">
         <h1>
-            <span class="font-w300">Despesas Mensais</span>
+            <span class="font-w300">Receitas Extras</span>
         </h1>
     </div>
 </div>
@@ -45,7 +45,7 @@
                 {
                     <tr>
                         <td>
-                            <a class="font-w600" href="#">@Html.DisplayFor(modelItem => item.NomeItem)</a>
+                            <a class="font-w600 text-success" href="#">@Html.DisplayFor(modelItem => item.NomeItem)</a>
                         </td>
                         <td class="text-center">
                             @Html.DisplayFor(modelItem => item.DataHora)
@@ -58,7 +58,7 @@
                 <tr class="table-success">
                     <td colspan="2" class="text-left font-w600 text-uppercase">Valor Total:</td>
 
-                    <td class="text-right font-w600">R$@ViewBag.SomaDespesasMensalTotal</td>
+                    <td class="text-right font-w600">R$@ViewBag.SomaReceitaMensalTotal</td>
                 </tr>
 
             </tbody>
@@ -66,7 +66,3 @@
         <!-- END Orders Table -->
     </div>
 </div>
-
-@section	ScriptPage	{
-    <script src="@Url.Content("~/Scripts/Views/DespesaMensal/TabelaDespesaMensal.js")"></script>
-}

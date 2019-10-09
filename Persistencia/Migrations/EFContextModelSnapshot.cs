@@ -80,9 +80,9 @@ namespace Persistencia.Migrations
                     b.ToTable("DESPESAS_PARCELADAS");
                 });
 
-            modelBuilder.Entity("Modelo.Entidades.ReceitaAdicional", b =>
+            modelBuilder.Entity("Modelo.Entidades.ReceitaExtra", b =>
                 {
-                    b.Property<int?>("ReceitaAdicionalId")
+                    b.Property<int?>("ReceitaExtraId")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -94,9 +94,9 @@ namespace Persistencia.Migrations
 
                     b.Property<decimal>("Valor");
 
-                    b.HasKey("ReceitaAdicionalId");
+                    b.HasKey("ReceitaExtraId");
 
-                    b.ToTable("RECEITAS_ADICIONAIS");
+                    b.ToTable("RECEITAS_EXTRAS");
                 });
 
             modelBuilder.Entity("Modelo.Entidades.ReceitaMensal", b =>

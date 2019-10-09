@@ -128,14 +128,11 @@
     <Compile Include="DAL\Entidades\DespesaDiaDAL.cs" />
     <Compile Include="DAL\Entidades\DespesaMensalDAL.cs" />
     <Compile Include="DAL\Entidades\DespesaParceladaDAL.cs" />
+    <Compile Include="DAL\Entidades\ReceitaExtraDAL.cs" />
     <Compile Include="DAL\Tabelas\DashboardDAL.cs" />
-    <Compile Include="Migrations\20191005174434_Inicial.cs" />
-    <Compile Include="Migrations\20191005174434_Inicial.designer.cs">
-      <DependentUpon>20191005174434_Inicial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20191008133214_Inicial 1.1.cs" />
-    <Compile Include="Migrations\20191008133214_Inicial 1.1.designer.cs">
-      <DependentUpon>20191008133214_Inicial 1.1.cs</DependentUpon>
+    <Compile Include="Migrations\20191008172239_Inicial 1.3.cs" />
+    <Compile Include="Migrations\20191008172239_Inicial 1.3.designer.cs">
+      <DependentUpon>20191008172239_Inicial 1.3.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\EFContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

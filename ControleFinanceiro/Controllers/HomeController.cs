@@ -20,8 +20,14 @@ namespace ControleFinanceiro.Controllers
             var mes = DateTime.Now.Month;
             var ano = DateTime.Now.Year;
 
-            var somaTotalDespesasMensal = dashboardServico.ObterSomaDespesasMensal(mes, ano);
+            var somaTotalDespesasMensal = dashboardServico.ObterSomaDespesasMensalTotais(mes, ano);
             ViewBag.SomaDespesasMensalTotal = somaTotalDespesasMensal;
+
+            var somaTotalReceitaMensal = dashboardServico.ObterSomaReceitaMensalTotais(mes, ano);
+            ViewBag.SomaReceitaMensalTotal = somaTotalReceitaMensal;
+
+            ViewBag.SomaReceitaLiquida = somaTotalReceitaMensal - somaTotalDespesasMensal;
+
             return View();
         }
     }

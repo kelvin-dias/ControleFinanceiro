@@ -10,7 +10,7 @@ namespace Persistencia.Context
         public DbSet<DespesaDia> DespesasDia { get; set; }
         public DbSet<DespesaMensal> DespesasMensais { get; set; }
         public DbSet<ReceitaMensal> ReceitasMensais { get; set; }
-        public DbSet<ReceitaAdicional> ReceitaAdicionals { get; set; }
+        public DbSet<ReceitaExtra> ReceitasExtras { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -25,7 +25,6 @@ namespace Persistencia.Context
             modelBuilder.Entity<DespesaDia>().ToTable("DESPESAS_DIA");
             modelBuilder.Entity<DespesaMensal>().ToTable("DESPESAS_MENSAIS");
             modelBuilder.Entity<ReceitaMensal>().ToTable("RECEITAS_MENSAIS");
-            modelBuilder.Entity<ReceitaAdicional>().ToTable("RECEITAS_ADICIONAIS");
         }
 
     }

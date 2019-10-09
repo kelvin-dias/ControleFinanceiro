@@ -9,12 +9,14 @@ namespace ControleFinanceiro.Controllers
     {
         private DespesaMensalServico despesaMensalServico = new DespesaMensalServico();
 
+        [Authorize]
         // GET: DespesaMensal
         public ActionResult ListarDespesasMensais()
         {
             return View(despesaMensalServico.ObterDespesasMensais());
         }
 
+        [Authorize]
         public ActionResult TabelaDespesasMensais()
         {
             var mes = DateTime.Now.Month;
@@ -27,12 +29,14 @@ namespace ControleFinanceiro.Controllers
         }
 
         // GET: DespesaMensal
+        [Authorize]
         public ActionResult AdicionarDespesaMensal()
         {
             return View();
         }
 
         // POST: DespesaMensal
+        [Authorize]
         [HttpPost]
         public ActionResult AdicionarDespesaMensal(DespesaMensal despesaMensal)
         {

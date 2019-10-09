@@ -10,8 +10,8 @@ using Persistencia.Context;
 namespace Persistencia.Migrations
 {
     [DbContext(typeof(EFContext))]
-    [Migration("20191008133214_Inicial 1.1")]
-    partial class Inicial11
+    [Migration("20191008172239_Inicial 1.3")]
+    partial class Inicial13
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -82,9 +82,9 @@ namespace Persistencia.Migrations
                     b.ToTable("DESPESAS_PARCELADAS");
                 });
 
-            modelBuilder.Entity("Modelo.Entidades.ReceitaAdicional", b =>
+            modelBuilder.Entity("Modelo.Entidades.ReceitaExtra", b =>
                 {
-                    b.Property<int?>("ReceitaAdicionalId")
+                    b.Property<int?>("ReceitaExtraId")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -96,9 +96,9 @@ namespace Persistencia.Migrations
 
                     b.Property<decimal>("Valor");
 
-                    b.HasKey("ReceitaAdicionalId");
+                    b.HasKey("ReceitaExtraId");
 
-                    b.ToTable("RECEITAS_ADICIONAIS");
+                    b.ToTable("RECEITAS_EXTRAS");
                 });
 
             modelBuilder.Entity("Modelo.Entidades.ReceitaMensal", b =>

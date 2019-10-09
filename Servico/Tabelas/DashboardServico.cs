@@ -5,9 +5,14 @@ namespace Servico.Tabelas
     public class DashboardServico
     {
         DashboardDAL dashboardDAL = new DashboardDAL();
-        public decimal ObterSomaDespesasMensal(int mes, int ano)
+        public decimal ObterSomaDespesasMensalTotais(int mes, int ano)
         {
-            return dashboardDAL.ObterSomaDespesasMensal(mes, ano);
+            return dashboardDAL.ObterSomaDespesasMensalTotais(mes, ano);
+        }
+
+        public decimal ObterSomaReceitaMensalTotais(int mes, int ano)
+        {
+            return dashboardDAL.ObterSomaReceitaMensalTotais(mes, ano);
         }
     }
 }

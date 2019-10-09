@@ -11,11 +11,13 @@ namespace ControleFinanceiro.Controllers
 
 
         // GET: DespesaDia
+        [Authorize]
         public ActionResult ListarDespesasDia()
         {
             return View(despesaDiaServico.ObterDespesasDia());
         }
 
+        [Authorize]
         public ActionResult TabelaDespesasDia()
         {
             var mes = DateTime.Now.Month;
@@ -28,11 +30,12 @@ namespace ControleFinanceiro.Controllers
         }
 
         // GET: DespesaFixa
+        [Authorize]
         public ActionResult AdicionarDespesasDia()
         {
             return View();
         }
-
+        [Authorize]
         // POST: DespesaDia
         [HttpPost]
         public ActionResult AdicionarDespesasDia(DespesaDia despesaDia)

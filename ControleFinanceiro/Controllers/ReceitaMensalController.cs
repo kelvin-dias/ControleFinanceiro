@@ -13,12 +13,14 @@ namespace ControleFinanceiro.Controllers
         private ReceitaMensalServico receitaMensalServico = new ReceitaMensalServico();
 
         // GET: ReceitaMensal
+        [Authorize]
         public ActionResult ListarReceitaMensal()
         {
             return View(receitaMensalServico.ObterReceitaMensal());
         }
 
         // GET: ReceitaMensal
+        [Authorize]
         public ActionResult TabelaReceitaMensal()
         {
             var mes = DateTime.Now.Month;
@@ -30,6 +32,7 @@ namespace ControleFinanceiro.Controllers
         }
 
         // GET: ReceitaMensal
+        [Authorize]
         public ActionResult AdicionarReceitaMensal()
         {
             return View();
@@ -37,6 +40,7 @@ namespace ControleFinanceiro.Controllers
 
         // POST: ReceitaMensal
         [HttpPost]
+        [Authorize]
         public ActionResult AdicionarReceitaMensal(ReceitaMensal receitaMensal)
         {
             try

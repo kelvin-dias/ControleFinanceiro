@@ -45,7 +45,7 @@
     <Compile Include="Entidades\DespesaDia.cs" />
     <Compile Include="Entidades\DespesaMensal.cs" />
     <Compile Include="Entidades\DespesaParcelada.cs" />
-    <Compile Include="Entidades\ReceitaAdicional.cs" />
+    <Compile Include="Entidades\ReceitaExtra.cs" />
     <Compile Include="Entidades\ReceitaMensal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tabelas\Usuario.cs" />

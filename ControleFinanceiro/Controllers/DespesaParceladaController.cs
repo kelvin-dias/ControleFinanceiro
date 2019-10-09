@@ -12,13 +12,9 @@ namespace ControleFinanceiro.Controllers
     {
         private DespesaParceladaServico despesaParceladaServico = new DespesaParceladaServico();
 
-        // GET: CompraParcelada
-        public ActionResult Index()
-        {
-            return View();
-        }
 
         // GET: DespesaParcelada
+        [Authorize]
         public ActionResult ListarDespesasParceladas()
         {
             return View(despesaParceladaServico.ObterDespesaParcelada());
@@ -35,6 +31,7 @@ namespace ControleFinanceiro.Controllers
         }
 
         // GET: DespesaMensal
+        [Authorize]
         public ActionResult AdicionarDespesaParcelada()
         {
             return View();
@@ -42,6 +39,7 @@ namespace ControleFinanceiro.Controllers
 
         // POST: DespesaMensal
         [HttpPost]
+        [Authorize]
         public ActionResult AdicionarDespesaParcelada(DespesaParcelada despesaParcelada)
         {
             try

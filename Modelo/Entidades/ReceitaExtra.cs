@@ -1,12 +1,14 @@
 ﻿using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Modelo.Entidades
 {
-    public class ReceitaAdicional
+    [Table("RECEITAS_EXTRAS")]
+    public class ReceitaExtra
     {
-        public int? ReceitaAdicionalId { get; set; }
+        public int? ReceitaExtraId { get; set; }
 
         [DisplayName("Item")]
         public string NomeItem { get; set; }

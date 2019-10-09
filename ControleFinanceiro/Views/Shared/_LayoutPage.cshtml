@@ -22,8 +22,6 @@
 </head>
 <body>
     <div id="page-container" class="sidebar-mini sidebar-o sidebar-inverse enable-page-overlay side-scroll page-header-fixed main-content-boxed">
-
-
         <!-- Sidebar -->
         <nav id="sidebar">
             <!-- Sidebar Content -->
@@ -114,7 +112,15 @@
                             </ul>
                         </li>
                         <li>
-                            <a href=""><i class="si si-lock"></i><span class="sidebar-mini-hide">Extras</span></a>
+                            <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-docs"></i><span class="sidebar-mini-hide">Extras</span></a>
+                            <ul>
+                                <li>
+                                    @Html.ActionLink("Adicionar Receita", "AdicionarReceitaExtra", "ReceitaExtra")
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Consultar Receitas", "TabelaReceitaExtra", "ReceitaExtra")
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -138,7 +144,13 @@
                     <!-- User Dropdown -->
                     <div class="dropdown d-inline-block" role="group">
                         <button type="button" class="btn btn-dual-secondary dropdown-toggle" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Admin
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                        @User.Identity.Name
+                            } else
+                            {
+                                <div>Problema na Autenticação</div>
+                            }
                         </button>
                         <div class="dropdown-menu min-width-200" aria-labelledby="page-header-user-dropdown">
                             <a class="dropdown-item" href="javascript:void(0)">
@@ -161,7 +173,7 @@
                             <!-- END Side Overlay -->
 
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="javascript:void(0)">
+                            <a class="dropdown-item" href="@Url.Action("Logout","Autenticacao")">
                                 <i class="si si-logout mr-5"></i> Sign Out
                             </a>
                         </div>
@@ -240,7 +252,6 @@
         <!-- Footer -->
         <footer id="page-footer" class="opacity-0">
             <div class="content py-20 font-size-xs clearfix">
-
                 <div class="float-left">
                     <span>Desenvolvido por </span><a class="font-w600" href="https://github.com/kelvin-dias" target="_blank">Kelvin Oliveira</a> &copy; <span class="js-year-copy">1993</span>
                 </div>

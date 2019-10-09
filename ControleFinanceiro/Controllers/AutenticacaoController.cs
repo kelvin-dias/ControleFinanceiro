@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Policy;
 using System.Security.Claims;
 using System.Web;
+using System;
 
 namespace ControleFinanceiro.Controllers
 {
@@ -54,13 +55,23 @@ namespace ControleFinanceiro.Controllers
 
             Request.GetOwinContext().Authentication.SignIn(identity);
 
-            if (!string.IsNullOrWhiteSpace(viewModel.UrlRetorno) || Url.IsLocalUrl(viewModel.UrlRetorno))
+            if (!String.IsNullOrWhiteSpace(viewModel.UrlRetorno) || Url.IsLocalUrl(viewModel.UrlRetorno))
             {
-                return Redirect(viewModel.UrlRetorno);
-            }else
+                return RedirectToAction("Dashboard", "Home");
+
+                //problema ao direcionar para página solicitada.
+                //return Redirect(viewModel.UrlRetorno);
+            }
+            else
             {
                 return RedirectToAction("Dashboard", "Home");
             }
+        }
+        public ActionResult Logout()
+        {
+            var teste = User.Identity.Name;
+            Request.GetOwinContext().Authentication.SignOut("ApplicationCookie");
+            return RedirectToAction("Login", "Autenticacao");
         }
     }
 }
